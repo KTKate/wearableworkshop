@@ -1,0 +1,110 @@
+{
+  "hrChatbotQA": [
+    {
+      "category": "Time Off & Leave",
+      "questions": [
+        {
+          "question": "How do I request time off?",
+          "answer": "You can request time off through our HR portal or by emailing your manager and HR at least 2 weeks in advance. Include the dates, type of leave (PTO, sick, etc.), and reason. You'll receive confirmation within 2-3 business days."
+        },
+        {
+          "question": "How much PTO do I get?",
+          "answer": "Full-time employees receive 15 days of PTO in their first year, increasing to 20 days after 3 years. PTO accrues monthly and can be rolled over up to 5 days per year."
+        },
+        {
+          "question": "What's the parental leave policy?",
+          "answer": "We offer 12 weeks of paid parental leave for primary caregivers and 6 weeks for secondary caregivers. This applies to birth, adoption, or foster placement. Contact HR at least 30 days before your anticipated leave date."
+        },
+        {
+          "question": "Can I use sick leave for mental health days?",
+          "answer": "Absolutely. We provide 10 sick days per year that can be used for physical or mental health needs. No doctor's note required for absences under 3 consecutive days."
+        }
+      ]
+    },
+    {
+      "category": "Remote Work",
+      "questions": [
+        {
+          "question": "What are the remote work policies?",
+          "answer": "Eligible employees can work remotely up to 3 days per week with manager approval. You must maintain core hours (10am-3pm in your timezone), have reliable internet, and attend all required meetings. A home office stipend of $500 is provided annually."
+        },
+        {
+          "question": "Am I eligible to work remotely?",
+          "answer": "Remote work eligibility depends on your role and performance. Generally, employees who've completed their probationary period (90 days) and whose roles don't require on-site presence are eligible. Discuss with your manager."
+        },
+        {
+          "question": "Can I work from another state/country?",
+          "answer": "Temporary remote work from another location (under 30 days) requires manager approval. Permanent relocation requires HR approval due to tax and legal implications. Contact HR at least 60 days in advance."
+        }
+      ]
+    },
+    {
+      "category": "Benefits",
+      "questions": [
+        {
+          "question": "How do I enroll in benefits?",
+          "answer": "New hires can enroll during their first 30 days. Log into our benefits portal at benefits.hormoniq.com, review your options, and complete enrollment. Annual open enrollment is every November. Contact benefits@hormoniq.com for help."
+        },
+        {
+          "question": "When does my health insurance start?",
+          "answer": "Health insurance coverage begins on the first day of the month following your start date. If you start on the 1st, coverage begins that day."
+        },
+        {
+          "question": "What's included in our benefits package?",
+          "answer": "We offer health, dental, and vision insurance (company pays 80%), 401(k) with 4% match, life insurance, disability coverage, FSA/HSA options, gym membership reimbursement, and professional development funds ($1,500/year)."
+        }
+      ]
+    },
+    {
+      "category": "DEI & Workplace Culture",
+      "questions": [
+        {
+          "question": "What is the company's commitment to DEI?",
+          "answer": "We're committed to building a diverse, equitable, and inclusive workplace. This includes unbiased hiring practices, employee resource groups, DEI training, equitable compensation reviews, and zero tolerance for discrimination or harassment."
+        },
+        {
+          "question": "How do I report discrimination or harassment?",
+          "answer": "Report concerns to HR immediately via hr@hormoniq.com, our anonymous hotline (1-800-XXX-XXXX), or directly to our DEI officer. All reports are taken seriously and investigated promptly. We prohibit retaliation."
+        },
+        {
+          "question": "Are there employee resource groups I can join?",
+          "answer": "Yes! We have ERGs for women, LGBTQ+ employees, BIPOC employees, parents, and veterans. Check the HR portal for meeting schedules and Slack channels, or email diversity@hormoniq.com."
+        }
+      ]
+    },
+    {
+      "category": "IT & Equipment",
+      "questions": [
+        {
+          "question": "Who do I contact for IT support?",
+          "answer": "Email itsupport@hormoniq.com or call ext. 4357. For urgent issues (system down, security concerns), call the IT helpdesk at 1-800-XXX-XXXX. Average response time is 2 hours for standard requests, 30 minutes for urgent issues."
+        },
+        {
+          "question": "How do I request new equipment?",
+          "answer": "Submit a request through the IT portal or email your manager and IT. Include justification and equipment specifications. Approval typically takes 3-5 business days, with equipment arriving within 2 weeks."
+        }
+      ]
+    },
+    {
+      "category": "Onboarding & General",
+      "questions": [
+        {
+          "question": "What should I expect on my first day?",
+          "answer": "Arrive at 9am to reception. You'll receive your badge, equipment, and workspace assignment. Your manager will provide an orientation schedule including HR paperwork, IT setup, team introductions, and a welcome lunch."
+        },
+        {
+          "question": "Where can I find company policies?",
+          "answer": "All policies are available on the HR portal under 'Employee Handbook' or at portal.hormoniq.com/policies. You can also request a PDF copy from HR."
+        },
+        {
+          "question": "How do performance reviews work?",
+          "answer": "We conduct formal reviews twice per year (June and December). Your manager will schedule a meeting to discuss goals, achievements, and development areas. Reviews influence compensation adjustments and promotion decisions."
+        },
+        {
+          "question": "Who is my HR contact?",
+          "answer": "Your HR Business Partner is assigned by department. Check the HR portal or email hr@hormoniq.com and we'll connect you with the right person. For urgent matters, contact our HR Director at director@hormoniq.com."
+        }
+      ]
+    }
+  ]
+}

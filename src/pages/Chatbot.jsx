@@ -1,37 +1,78 @@
 import { useState } from 'react';
+import hrQAData from '../data/hrQA.json';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
     {
-      text: "Hello! I'm the HR Assistant. How can I help you today?",
+      text: "Hello! I'm the HR Assistant. How can I help you today? I can answer questions about time off, remote work, benefits, DEI, IT support, and general HR policies.",
       sender: 'bot'
     }
   ]);
   const [inputValue, setInputValue] = useState('');
 
+  // Extract quick questions from various categories
   const quickQuestions = [
     "How do I request time off?",
     "What are the remote work policies?",
     "How do I enroll in benefits?",
-    "Who do I contact for IT support?"
+    "Who do I contact for IT support?",
+    "How much PTO do I get?",
+    "Can I work from another state/country?",
+    "What is the company's commitment to DEI?",
+    "What should I expect on my first day?"
   ];
 
+  // Function to calculate similarity between two strings
+  const calculateSimilarity = (str1, str2) => {
+    const s1 = str1.toLowerCase().trim();
+    const s2 = str2.toLowerCase().trim();
+
+    // Exact match
+    if (s1 === s2) return 1.0;
+
+    // Contains match
+    if (s1.includes(s2) || s2.includes(s1)) return 0.8;
+
+    // Word overlap
+    const words1 = s1.split(/\s+/);
+    const words2 = s2.split(/\s+/);
+
+    let matchCount = 0;
+    words1.forEach(word1 => {
+      if (word1.length > 3) { // Only count words longer than 3 characters
+        words2.forEach(word2 => {
+          if (word1 === word2 || word1.includes(word2) || word2.includes(word1)) {
+            matchCount++;
+          }
+        });
+      }
+    });
+
+    const maxWords = Math.max(words1.length, words2.length);
+    return matchCount / maxWords;
+  };
+
   const getResponse = (question) => {
-    const responses = {
-      "how do i request time off": "To request time off, log into the HR portal, navigate to 'Time Off' section, select the dates you need, and submit your request. Your manager will receive a notification for approval.",
-      "what are the remote work policies": "Employees can work remotely up to 3 days per week with manager approval. You must maintain availability during core business hours (10 AM - 3 PM) and meet all performance expectations.",
-      "how do i enroll in benefits": "Benefits enrollment opens during your first week and annually during open enrollment (typically in November). Access the benefits portal through the HR system to review options and make selections.",
-      "who do i contact for it support": "For IT support, email support@company.com or call ext. 4357. For urgent issues, you can also use the IT help desk chat available 24/7 on the company intranet."
-    };
+    let bestMatch = null;
+    let bestScore = 0;
 
-    const normalizedQuestion = question.toLowerCase().trim();
-    const response = responses[normalizedQuestion];
+    // Search through all Q&A pairs
+    hrQAData.hrChatbotQA.forEach(category => {
+      category.questions.forEach(qa => {
+        const score = calculateSimilarity(question, qa.question);
+        if (score > bestScore) {
+          bestScore = score;
+          bestMatch = qa;
+        }
+      });
+    });
 
-    if (response) {
-      return response;
+    // Return the best match if confidence is high enough
+    if (bestMatch && bestScore > 0.3) {
+      return bestMatch.answer;
     }
 
-    return "I'm not sure about that specific question. Please contact HR directly at hr@company.com or call ext. 5000 for personalized assistance.";
+    return "I'm not sure about that specific question. Please contact HR directly at hr@hormoniq.com or call ext. 5000 for personalized assistance. You can also browse our policies page for more information.";
   };
 
   const handleSend = () => {
