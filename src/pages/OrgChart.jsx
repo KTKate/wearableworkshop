@@ -3,30 +3,30 @@ const OrgChart = () => {
     ceo: {
       name: "Amparo Maria Folch",
       title: "CEO / Founder",
-      color: "bg-blue-600"
+      color: "bg-amber-800"
     },
     executives: [
       {
         name: "Anthony Cocuzza",
         title: "CTO (Technology)",
-        color: "bg-indigo-500",
+        color: "bg-yellow-800",
         team: [
           {
             name: "Chanchal Saha",
             title: "Engineering Lead",
-            color: "bg-indigo-400"
+            color: "bg-amber-600"
           }
         ]
       },
       {
         name: "Kate Yzurdiaga",
         title: "CMO (Marketing)",
-        color: "bg-purple-500",
+        color: "bg-orange-800",
         team: [
           {
             name: "Brian Lee",
             title: "Social Media / Growth",
-            color: "bg-purple-400"
+            color: "bg-orange-600"
           }
         ]
       }
@@ -35,12 +35,12 @@ const OrgChart = () => {
       {
         name: "Kate Terraccino",
         title: "Product Manager",
-        color: "bg-teal-500"
+        color: "bg-amber-700"
       },
       {
         name: "Nathan Lavertue",
         title: "UI/UX Designer",
-        color: "bg-cyan-500"
+        color: "bg-yellow-700"
       }
     ]
   };
@@ -59,7 +59,7 @@ const OrgChart = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -67,9 +67,8 @@ const OrgChart = () => {
             Organizational Chart
           </h1>
           <div className="flex items-center justify-center mb-4">
-            <div className="bg-white px-8 py-3 rounded-lg shadow-md">
-              <span className="text-3xl font-bold text-gray-800">Hormon</span>
-              <span className="text-3xl font-bold text-green-500">IQ</span>
+            <div className="bg-white px-8 py-4 rounded-lg shadow-md">
+              <img src="/hormoniq-logo.svg" alt="HormonIQ" className="h-12" />
             </div>
           </div>
           <p className="text-gray-600 text-lg">
@@ -93,19 +92,19 @@ const OrgChart = () => {
 
           {/* Connector Line from CEO */}
           <div className="flex justify-center">
-            <div className="w-1 h-8 bg-gray-300"></div>
+            <div className="w-1 h-8 bg-amber-300"></div>
           </div>
 
           {/* Executive Level */}
           <div className="relative">
             {/* Horizontal Line */}
-            <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-gray-300 transform -translate-y-8"></div>
+            <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-amber-300 transform -translate-y-8"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {orgData.executives.map((exec, idx) => (
                 <div key={idx} className="flex flex-col items-center">
                   {/* Vertical connector */}
-                  <div className="w-1 h-8 bg-gray-300 mb-0"></div>
+                  <div className="w-1 h-8 bg-amber-300 mb-0"></div>
 
                   {/* Executive Card */}
                   <div className="w-72">
@@ -119,7 +118,7 @@ const OrgChart = () => {
                   {/* Team Members under Executive */}
                   {exec.team && exec.team.length > 0 && (
                     <>
-                      <div className="w-1 h-8 bg-gray-300 mt-4"></div>
+                      <div className="w-1 h-8 bg-amber-300 mt-4"></div>
                       <div className="space-y-4 mt-4">
                         {exec.team.map((member, memberIdx) => (
                           <div key={memberIdx} className="w-72">
@@ -142,7 +141,7 @@ const OrgChart = () => {
           <div className="relative mt-16">
             <div className="flex justify-center mb-8">
               <div className="text-center">
-                <div className="w-1 h-8 bg-gray-300 mx-auto"></div>
+                <div className="w-1 h-8 bg-amber-300 mx-auto"></div>
                 <h2 className="text-2xl font-semibold text-gray-700 mt-4 mb-8">
                   Core Team
                 </h2>
