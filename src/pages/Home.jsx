@@ -3,7 +3,7 @@ const Home = () => {
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Welcome to Our HR Portal
+          Welcome to [COMPANY_NAME] HR Portal
         </h1>
         <p className="text-xl text-gray-600">
           Your gateway to company resources and support

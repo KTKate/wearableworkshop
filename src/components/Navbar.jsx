@@ -5,8 +5,12 @@ const Navbar = () => {
     <nav className="bg-blue-600 text-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold">
-            HR Portal
+          <Link to="/" className="flex items-center space-x-3">
+            {/* Logo Placeholder - Replace with actual logo */}
+            <div className="w-10 h-10 bg-white rounded flex items-center justify-center">
+              <span className="text-blue-600 font-bold text-xs">LOGO</span>
+            </div>
+            <span className="text-2xl font-bold">[COMPANY_NAME]</span>
           </Link>
           <div className="flex space-x-6">
             <Link
