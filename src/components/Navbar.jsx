@@ -33,6 +33,12 @@ const Navbar = () => {
             >
               HR Chatbot
             </Link>
+            <Link
+              to="/org-chart"
+              className="hover:bg-blue-700 px-3 py-2 rounded-md transition-colors"
+            >
+              Org Chart
+            </Link>
           </div>
         </div>
       </div>
